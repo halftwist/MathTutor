@@ -71,7 +71,7 @@ struct ContentView: View {
             Spacer()
             
             Button("Guess") {
-                print("You guessed:\(answer)")
+//                print("You guessed:\(answer)")
                 isFocused = false  // dismisses the Keyboard following press
                 
                 guard let answerValue = Int(answer) else {
@@ -100,6 +100,7 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.black)
                 .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.5)
                 .foregroundStyle(message == "Correct!" ? .green : .red)
                 .animation(.default, value: message)
              
